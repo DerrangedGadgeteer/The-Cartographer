@@ -1,0 +1,22 @@
+# UI
+- Viewport into map
+- Player Status Display
+- Inventory Display
+- Story Log Display
+ - World Event Popup
+- Save/Load Menu
+
+# Map Generation
+- Wave Function Collapse
+- Worker Type Map Generator
+ - Individual workers with different behavior/different styles.  Tie to lore.
+
+# Game State Controller
+- Player Stat Tracking
+- 
+
+# Player Controller
+
+# NPC Controller
+
+# Game Objects
