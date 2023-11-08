@@ -95,6 +95,27 @@
 
 "*" = subject to change for balance
 
+# Porting to Tabletop:
+
+- Since everything so far is based on powers of 2, can I use d4's to bring this math to the tabletop?
+  > 1D4 = 1/4
+  > 2D4 = 1/16
+  > 3D4 = 1/64
+  > 4D4 = 1/256
+  > 5D4 = 1/1024
+- Another possibility is using dice from Ur... D4's with two painted corners (D2's)
+  > 1D2 = 1/2
+  > 2D2 = 1/4
+  > 3D2 = 1/8
+  > 4D2 = 1/16
+  > 5D2 = 1/32
+  > 6D2 = 1/64
+  > 7D2 = 1/128
+  > 8D2 = 1/256
+  > 9D2 = 1/512
+  > 10D2 = 1/1024
+  - 10 dice isn't too many is it?
+
 # Notes:
 
 - Wound chance: 1, 2, 4, 8, 16, (Hardmode) 32, 64, 128, (Normal Mode) 256, 512, 1024 (Easy Mode) 
