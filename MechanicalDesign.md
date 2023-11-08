@@ -68,16 +68,16 @@
 - If an attack is made that inflicts more Negative Stamina than the Automatic Wound Threshold, then remaining Negative Stamina is accumulated and figured against the stamina like a separate attack/action would.
 - If that accumulated Negative Stamina Mortally Wounds the player and still has Negative Stamina accumulated, that Player Dies outright from Massive Damage.
 ### Example: 
-> Player has 8 Stamina, and recieves 25 Negative Stamina, (Difficulty: Easy)
-> Player hits 0 Stamina, falls Unconscious, 17 Negative Stamina remains
-> 11 Negative Stamina means Player is Automatically Wounded, 6 Negative Stamina Remains
-> Player Regains Consciousness, Player is now Wounded, Player has 1 Stamina, 6 Negative Stamina Remains
-> Player hits 0 Stamina again, falls Unconscious again, 5 Negative Stamina means 5 chances for wounds.
-> First Chance for Mortal Wounds: 1/1024 chance, Player doesn't get wounded,
-> 2nd Chance: 1/512 chance, 
-> 3rd Chance: 1/256 chance,  
-> 4th Chance: 1/128 chance, Player gets unlucky and gets Mortally Wounded, 0 Stamina,
-> Mortally Wounded Player is at 1 Negative Stamina and dies.
+> - Player has 8 Stamina, and recieves 25 Negative Stamina, (Difficulty: Easy)
+> - Player hits 0 Stamina, falls Unconscious, 17 Negative Stamina remains
+> - 11 Negative Stamina means Player is Automatically Wounded, 6 Negative Stamina Remains
+> - Player Regains Consciousness, Player is now Wounded, Player has 1 Stamina, 6 Negative Stamina Remains
+> - Player hits 0 Stamina again, falls Unconscious again, 5 Negative Stamina means 5 chances for wounds.
+> - First Chance for Mortal Wounds: 1/1024 chance, Player doesn't get wounded,
+> - 2nd Chance: 1/512 chance, 
+> - 3rd Chance: 1/256 chance,  
+> - 4th Chance: 1/128 chance, Player gets unlucky and gets Mortally Wounded, 0 Stamina,
+> - Mortally Wounded Player is at 1 Negative Stamina and dies.
 
 
 ## Restoration, First Aid, and Healing.
