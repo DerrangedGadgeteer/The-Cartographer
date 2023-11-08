@@ -1,33 +1,52 @@
 # Specialties:
 
-- Melee Combat
+## Melee Combat
   - Reduced Stamina Cost when attacking with melee weapons
   - Reduced Damage from attacks with melee weapons
   - Increased chance to hit with melee weapons
   - Increased chance to correctly identify enchanted melee weapons
 
-- Ranged Combat
+## Ranged Combat
   - Reduced Stamina Cost when attacking with ranged weapons
   - Increased chance to hit with ranged weapons
   - Increased chance to correctly identify enchanted ranged weapons and ammunition
   - Decreased chance for used ammunition to break once used
 
-- Unarmed Combat
+## Unarmed Combat
   - Reduced Stamina Cost when attacking unarmed, making barges, and grappling
   - Increased chance to hit when unarmed or with barges
   - Increased chance to successfully grapple, and to break out of being grappled
   - Increased chance to emulate unarmed combat techniques you see
 
-- Sports & Fieldcraft
-  - Reduced Stamina Cost when Sprinting, Leaping, Climbing, or other Ph
+## Sports & Fieldcraft
+  - Reduced Stamina Cost when Sprinting, Leaping, Climbing, or other Physical Tasks
+  - Increased chance to hit with improvised weapons
+  - Increased chance to spot secrets on the map
+  - Increased range to spot Items and NPC's
 
-- Potions & Alchemy
+## Potions & Alchemy
+  - Reduced Stamina Cost associated with casting spells via drinking, scattering, or otherwise utilizing a Potion
+  - Increased chance to correctly identify Potions and Alchemical Compounds
+  - Increased chance to correctly brew potions from recipes
+  - Increased chance to notice poisioned objects before being affected by the poison
 
-- Scrolls, Sigils, & Arcane Figures
+## Scrolls, Sigils, & Arcane Figures
+  - Reduced Stamina Cost associated with casting spells from Scrolls, and preparing sigil magics
+  - Increased chance to correctly identify Scrolls, arcane figures, and sigils in the overworld
+  - Increased chance to correctly cast spells from scrolls, and correctly prepare and trigger sigils
+  - Increased chance to duplicate sigils from scrolls, or from instructions in books or verbal descriptions
+  
+## Spoken, Sung, Danced, And Performed Magic
+  - Reduced Stamina Cost to perform both magical and nonmagical spoken word, song, dance, and ritual performances.
+  - Increased chance to duplicate a performance spell from seeing the spell performed
+  - Increased chance to identify and interrupt a performance spell in progress before it is complete
+  - Decreased chance to be affected by a performance magic spell
 
-- Spoken, Sung, Danced, And Performed Magic
-
-- Gilding, Imbuing, Enchanting, and Wandcraft
+## Gilding, Imbuing, Enchanting, and Wandcraft
+  - Reduced Stamina Cost associated with casting spells using enchanted nonweapon items and wands
+  - Reduced Stamina Cost to restore charges to a wand or staff
+  - Increased chance of correctly identifying enchanted and cursed nonweapon items
+  - Decresed chance of misfiring spells stored in wands, staves, and other nonweapon items
 
 # Stamina System:
 
