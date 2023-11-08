@@ -1,12 +1,25 @@
 # Specialties:
 
 - Melee Combat
+  - Reduced Stamina Cost when attacking with melee weapons
+  - Reduced Damage from attacks with melee weapons
+  - Increased chance to hit with melee weapons
+  - Increased chance to correctly identify enchanted melee weapons
 
 - Ranged Combat
+  - Reduced Stamina Cost when attacking with ranged weapons
+  - Increased chance to hit with ranged weapons
+  - Increased chance to correctly identify enchanted ranged weapons and ammunition
+  - Decreased chance for used ammunition to break once used
 
 - Unarmed Combat
+  - Reduced Stamina Cost when attacking unarmed, making barges, and grappling
+  - Increased chance to hit when unarmed or with barges
+  - Increased chance to successfully grapple, and to break out of being grappled
+  - Increased chance to emulate unarmed combat techniques you see
 
 - Sports & Fieldcraft
+  - Reduced Stamina Cost when Sprinting, Leaping, Climbing, or other Ph
 
 - Potions & Alchemy
 
