@@ -1,0 +1,14 @@
+# Main Story Locations
+- Town of Blue Spire
+- Town of Blue Spire (Ruined)
+- Spire Mountains Tunnels
+- The Thorn Wastes
+- The Caldera
+- The Town of Bristol
+- The Town of Bristol (Flooded & Under seige)
+- The Sunless Wode
+- Smugglers' Marshes
+- The Zigguraut
+- The whitestone Chasm
+- Caves of Whitestone
+- 
