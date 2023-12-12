@@ -60,3 +60,26 @@ Ranged Attacks are made against squares selected independantly of collision, how
 - If an intervening collider is hit, the attack is made against that object instead.
 - If not, the attack is made against the target's evasion like a direct attack.
 - If the target is missed as well, we use the unit ray calculated earlier 
+
+# Animation (Movement)
+```
+var velocity = Vector2.ZERO
+var movecountdown = 0
+
+func _process(delta)
+ if movecountdown = 0:
+  var xsnap = position.x / 32
+  position.x = xsnap.round() * 32
+  var ysnap = position.y / 32
+  position.y = ysnap.round() * 32
+  velocity = ZERO
+ else:
+  position += velocity * delta
+  movecountdown = movecountdown - 1
+  sound.play(footstep)
+
+func MoveSelf(direction)
+ velocity = direction
+ var distance = 32 * direction.length()
+ movecountdown = distance.round()
+```
