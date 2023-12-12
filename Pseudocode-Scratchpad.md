@@ -26,6 +26,10 @@ If the player's speed lands on the same tick as another entity, the player alway
  Func _onfree()
    LocalState.UnloadInitiativeEntry(node-unique-name)
 ```
+Note: Nonplayer Entities need a way to hold the LocalState at a particular Initiative Entry
+```
+
+```
 # Animations
 
 Animations use the built-in "Delta" processes
@@ -121,6 +125,7 @@ func _process(delta)
   for Entry in InitiativeTable:
    Initiative = Entry
    Signal Initiative.emit(Initiative)
+   await InitiativeRelease() # Note: Coroutine here, need to actually play with it a bit.
   gametick = gametick +1
   Signal Gametick.emit(gametick)
  
@@ -133,25 +138,28 @@ func Release()
 In the case of a Nonplayer Controller:
 ```
 var Initiative
-var InitiativeGoNogo = false
+var CurrentGametick
+var Speed
+
 func _onready()
  Initiative = Localstate.AssignInitiative(self)
  Instantiate.sprites& # WhateverOtherStuff
 
 func _on-Initiative-signal-recieved(CurrentInitiativeCount)
  if CurrentInitiativeCount = Initiative:
-  InitiativeGoNogo = true
+  LocalState.InitiativeHold()
+  ActionCounter(CurrentGametick)
+  Localstate.InitiativeRelease()
  else:
-  InitiativeGoNogo = false
+  pass
 
 func _on-Gametick-signal-recieved(Gametick)
- ActionCounter(Gametick)
+ CurrentGametick = Gametick
 
  func ActionCounter(CurrentGameTick)
-  export var Speed
   var ActionGoNogo
   ActionGoNogo = CurrentGameTick MODULO(Speed)
-  if ActionGoNogo = 0 and InitiativeGoNogo = true:
+  if ActionGoNogo = 0 
     ObjectMainActionFunction()
   else:
     Pass
