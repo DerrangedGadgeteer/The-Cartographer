@@ -64,22 +64,22 @@ Ranged Attacks are made against squares selected independantly of collision, how
 # Animation (Movement)
 ```
 var velocity = Vector2.ZERO
-var movecountdown = 0
+var movecountdown = 0           # clamps movement into chunks
 
 func _process(delta)
- if movecountdown = 0:
+ if movecountdown = 0:          # Snap position to nearest grid square once movement is done
   var xsnap = position.x / 32
   position.x = xsnap.round() * 32
   var ysnap = position.y / 32
   position.y = ysnap.round() * 32
   velocity = ZERO
- else:
+ else:                          # Move the entity along the direction, and decrement the countdown
   position += velocity * delta
   movecountdown = movecountdown - 1
   sound.play(footstep)
 
-func MoveSelf(direction)
- velocity = direction
+func MoveSelf(direction)        # When a controller commands an entity to move, set the velocity per the
+ velocity = direction           # direction raycast, and set the movement end countdown so it doesn't go on forever
  var distance = 32 * direction.length()
  movecountdown = distance.round()
 ```
