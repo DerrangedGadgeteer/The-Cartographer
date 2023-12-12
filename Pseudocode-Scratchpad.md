@@ -2,9 +2,9 @@
 
 Movement and actions in The Cartographer are semi-turn based.  Each entity has a speed, which determines on which game tick that entity can act.  Lower speed means faster, and that entity can act on each game tick which is divisible by its speed.
 ```
- Emit signal: GameTick(CurrentGameTick)
- if Object has function "ActionCounter":
-   Object.ActionCounter(CurrentGameTick)
+ Emit signal: GameTick(CurrentGameTick)      # DEPRECATED
+ if Object has function "ActionCounter":     # DEPRECATED
+   Object.ActionCounter(CurrentGameTick)     # DEPRECATED
 ```
 ```
  func ActionCounter(CurrentGameTick)
@@ -83,3 +83,75 @@ func MoveSelf(direction)        # When a controller commands an entity to move, 
  var distance = 32 * direction.length()
  movecountdown = distance.round()
 ```
+
+# Controller
+
+I'm thinking of using a separate node to translate between either player controls, multiplayer remote controls, and AI's, and actually moving entities in the game world.  That way I divorce the game entities from the means of controling them.
+
+First: Game Ticks need a singleton, and when the player's game tick comes up, the player controller needs to hold the game until an input is selected.  (copied from above)
+
+```
+ func ActionCounter(CurrentGameTick)
+  export var Speed
+  var ActionGoNogo
+  ActionGoNogo = CurrentGameTick MODULO(Speed)
+  if ActionGoNogo = 0:
+    ObjectMainActionFunction()
+  else:
+    Pass
+```
+```
+func _on-Gametick-signal-recieved(Gametick)
+ ActionCounter(Gametick)
+```
+func ObjectMainActionFunction()
+ LocalState.Holdup()
+ input.parser # Parse Input &Translate to game object command
+ ControlledObject.Action(RequestedAction,Arguments)
+
+ LocalState.Release()  # Upon resolution of the Controlled object action
+```
+Back in the LocalState Singleton:
+```
+export var gametick = 0
+export var Initiative = 0
+func _process(delta)
+ if HOLD = false,
+  for Entry in InitiativeTable:
+   Initiative = Entry
+   Signal Initiative.emit(Initiative)
+  gametick = gametick +1
+  Signal Gametick.emit(gametick)
+ 
+func Holdup()
+ HOLD = true
+
+func Release()
+ HOLD = false  
+```
+In the case of a Nonplayer Controller:
+```
+var Initiative
+var InitiativeGoNogo = false
+func _onready()
+ Initiative = Localstate.AssignInitiative(self)
+ Instantiate.sprites& # WhateverOtherStuff
+
+func _on-Initiative-signal-recieved(CurrentInitiativeCount)
+ if CurrentInitiativeCount = Initiative:
+  InitiativeGoNogo = true
+ else:
+  InitiativeGoNogo = false
+
+func _on-Gametick-signal-recieved(Gametick)
+ ActionCounter(Gametick)
+
+ func ActionCounter(CurrentGameTick)
+  export var Speed
+  var ActionGoNogo
+  ActionGoNogo = CurrentGameTick MODULO(Speed)
+  if ActionGoNogo = 0 and InitiativeGoNogo = true:
+    ObjectMainActionFunction()
+  else:
+    Pass
+ 
