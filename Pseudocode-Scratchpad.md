@@ -104,6 +104,7 @@ First: Game Ticks need a singleton, and when the player's game tick comes up, th
 func _on-Gametick-signal-recieved(Gametick)
  ActionCounter(Gametick)
 ```
+```
 func ObjectMainActionFunction()
  LocalState.Holdup()
  input.parser # Parse Input &Translate to game object command
@@ -154,4 +155,4 @@ func _on-Gametick-signal-recieved(Gametick)
     ObjectMainActionFunction()
   else:
     Pass
- 
+```
